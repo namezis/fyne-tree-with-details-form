@@ -1,0 +1,304 @@
+  Goroutine 1 - Start: /usr/lib/go-1.16/src/runtime/proc.go:115 runtime.main (0x45dfc0) [select]
+  Goroutine 2 - Start: /usr/lib/go-1.16/src/runtime/proc.go:267 runtime.forcegchelper (0x45e3e0) [force gc (idle) 452306h3m26.302676813s]
+  Goroutine 3 - Start: /usr/lib/go-1.16/src/runtime/mgcsweep.go:156 runtime.bgsweep (0x44a000) [GC sweep wait]
+  Goroutine 4 - Start: /usr/lib/go-1.16/src/runtime/mgcscavenge.go:252 runtime.bgscavenge (0x448020) [GC scavenge wait]
+  Goroutine 18 - Start: /usr/lib/go-1.16/src/runtime/mfinal.go:161 runtime.runfinq (0x43f1a0) [finalizer wait 452306h3m26.302764095s]
+  Goroutine 19 - Start: /usr/lib/go-1.16/src/sync/once.go:42 sync.(*Once).Do (0x4a8720) [sleep 452306h1m26.286461985s]
+  Goroutine 20 - Start: /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/data/binding/queue.go:21 fyne.io/fyne/v2/data/binding.makeInfiniteQueue.func1 (0x682ce0) [select]
+  Goroutine 21 - Start: /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/data/binding/queue.go:52 fyne.io/fyne/v2/data/binding.processItems (0x682c20) [semacquire]
+  Goroutine 22 - Start: /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/app/app.go:118 fyne.io/fyne/v2/app.newAppWithDriver.func1 (0x709140) [chan receive 452306h3m26.302925664s]
+  Goroutine 23 - Start: /usr/lib/go-1.16/src/runtime/mgc.go:1877 runtime.gcBgMarkWorker (0x442ea0) [GC worker (idle)]
+  Goroutine 34 - Start: /home/user/go/pkg/mod/github.com/fsnotify/fsnotify@v1.4.9/inotify.go:172 github.com/fsnotify/fsnotify.(*Watcher).readEvents (0x704ce0) (thread 6369)
+  Goroutine 35 - Start: /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/app/settings_desktop.go:41 fyne.io/fyne/v2/app.watchFile.func1 (0x709540) [chan receive 452306h3m26.303035367s]
+  Goroutine 36 - Start: /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/internal/driver/glfw/loop.go:181 fyne.io/fyne/v2/internal/driver/glfw.(*gLDriver).startDrawThread.func1 (0x6c2a00) [select]
+  Goroutine 37 - Start: /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/internal/driver/glfw/window.go:1259 fyne.io/fyne/v2/internal/driver/glfw.(*window).runEventQueue (0x6c13e0) [semacquire]
+  Goroutine 38 - Start: /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/internal/driver/glfw/canvas.go:493 fyne.io/fyne/v2/internal/driver/glfw.(*glCanvas).setupThemeListener.func1 (0x6c2160) [chan receive 452306h3m26.303124733s]
+  Goroutine 39 - Start: /usr/lib/go-1.16/src/runtime/mgc.go:1877 runtime.gcBgMarkWorker (0x442ea0) [GC worker (idle) 452306h3m26.303204685s]
+  Goroutine 40 - Start: /usr/lib/go-1.16/src/runtime/mgc.go:1877 runtime.gcBgMarkWorker (0x442ea0) [GC worker (idle)]
+  Goroutine 41 - Start: /usr/lib/go-1.16/src/runtime/mgc.go:1877 runtime.gcBgMarkWorker (0x442ea0) [GC worker (idle)]
+  Goroutine 50 - Start: /usr/lib/go-1.16/src/runtime/mgc.go:1877 runtime.gcBgMarkWorker (0x442ea0) [GC worker (idle)]
+  Goroutine 51 - Start: /usr/lib/go-1.16/src/runtime/mgc.go:1877 runtime.gcBgMarkWorker (0x442ea0) [GC worker (idle)]
+  Goroutine 52 - Start: /usr/lib/go-1.16/src/runtime/mgc.go:1877 runtime.gcBgMarkWorker (0x442ea0) [GC worker (idle)]
+  Goroutine 53 - Start: /usr/lib/go-1.16/src/runtime/mgc.go:1877 runtime.gcBgMarkWorker (0x442ea0) [GC worker (idle)]
+  Goroutine 67 - Start: /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/internal/painter/svg_cache.go:107 fyne.io/fyne/v2/internal/painter.SvgCacheMonitorTheme.func1 (0x659ca0) [chan receive 452306h3m26.303413944s]
+
+
+  Goroutine 1 - User: /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/internal/driver/glfw/loop.go:90 fyne.io/fyne/v2/internal/driver/glfw.(*gLDriver).runGL (0x6b7a38) [select]
+	0  0x000000000045e645 in runtime.gopark
+	    at /usr/lib/go-1.16/src/runtime/proc.go:337
+	1  0x000000000046ec97 in runtime.selectgo
+	    at /usr/lib/go-1.16/src/runtime/select.go:327
+	2  0x00000000006b7a38 in fyne.io/fyne/v2/internal/driver/glfw.(*gLDriver).runGL
+	    at /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/internal/driver/glfw/loop.go:90
+	3  0x00000000006b707a in fyne.io/fyne/v2/internal/driver/glfw.(*gLDriver).Run
+	    at /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/internal/driver/glfw/driver.go:80
+	4  0x00000000006bcefd in fyne.io/fyne/v2/internal/driver/glfw.(*window).ShowAndRun
+	    at /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/internal/driver/glfw/window.go:450
+	5  0x00000000007152ba in main.main
+	    at ./main.go:128
+	6  0x000000000045e216 in runtime.main
+	    at /usr/lib/go-1.16/src/runtime/proc.go:225
+	7  0x0000000000490ee1 in runtime.goexit
+	    at /usr/lib/go-1.16/src/runtime/asm_amd64.s:1371
+  Goroutine 2 - User: /usr/lib/go-1.16/src/runtime/proc.go:337 runtime.gopark (0x45e645) [force gc (idle) 452306h3m46.080374281s]
+	0  0x000000000045e645 in runtime.gopark
+	    at /usr/lib/go-1.16/src/runtime/proc.go:337
+	1  0x000000000045e4a5 in runtime.goparkunlock
+	    at /usr/lib/go-1.16/src/runtime/proc.go:342
+	2  0x000000000045e4a5 in runtime.forcegchelper
+	    at /usr/lib/go-1.16/src/runtime/proc.go:276
+	3  0x0000000000490ee1 in runtime.goexit
+	    at /usr/lib/go-1.16/src/runtime/asm_amd64.s:1371
+  Goroutine 3 - User: /usr/lib/go-1.16/src/runtime/proc.go:337 runtime.gopark (0x45e645) [GC sweep wait]
+	0  0x000000000045e645 in runtime.gopark
+	    at /usr/lib/go-1.16/src/runtime/proc.go:337
+	1  0x000000000044a13b in runtime.goparkunlock
+	    at /usr/lib/go-1.16/src/runtime/proc.go:342
+	2  0x000000000044a13b in runtime.bgsweep
+	    at /usr/lib/go-1.16/src/runtime/mgcsweep.go:182
+	3  0x0000000000490ee1 in runtime.goexit
+	    at /usr/lib/go-1.16/src/runtime/asm_amd64.s:1371
+  Goroutine 4 - User: /usr/lib/go-1.16/src/runtime/proc.go:337 runtime.gopark (0x45e645) [GC scavenge wait]
+	0  0x000000000045e645 in runtime.gopark
+	    at /usr/lib/go-1.16/src/runtime/proc.go:337
+	1  0x00000000004482bc in runtime.goparkunlock
+	    at /usr/lib/go-1.16/src/runtime/proc.go:342
+	2  0x00000000004482bc in runtime.bgscavenge
+	    at /usr/lib/go-1.16/src/runtime/mgcscavenge.go:314
+	3  0x0000000000490ee1 in runtime.goexit
+	    at /usr/lib/go-1.16/src/runtime/asm_amd64.s:1371
+  Goroutine 18 - User: /usr/lib/go-1.16/src/runtime/proc.go:337 runtime.gopark (0x45e645) [finalizer wait 452306h3m46.08294926s]
+	0  0x000000000045e645 in runtime.gopark
+	    at /usr/lib/go-1.16/src/runtime/proc.go:337
+	1  0x000000000043f249 in runtime.goparkunlock
+	    at /usr/lib/go-1.16/src/runtime/proc.go:342
+	2  0x000000000043f249 in runtime.runfinq
+	    at /usr/lib/go-1.16/src/runtime/mfinal.go:175
+	3  0x0000000000490ee1 in runtime.goexit
+	    at /usr/lib/go-1.16/src/runtime/asm_amd64.s:1371
+  Goroutine 19 - User: /usr/lib/go-1.16/src/runtime/time.go:193 time.Sleep (0x48df92) [sleep 452306h1m46.067467925s]
+	0  0x000000000045e645 in runtime.gopark
+	    at /usr/lib/go-1.16/src/runtime/proc.go:337
+	1  0x000000000048df92 in time.Sleep
+	    at /usr/lib/go-1.16/src/runtime/time.go:193
+	2  0x0000000000659ba9 in fyne.io/fyne/v2/internal/painter.svgCacheJanitor.func1
+	    at /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/internal/painter/svg_cache.go:57
+	3  0x00000000004a886c in sync.(*Once).doSlow
+	    at /usr/lib/go-1.16/src/sync/once.go:68
+	4  0x00000000004a8765 in sync.(*Once).Do
+	    at /usr/lib/go-1.16/src/sync/once.go:59
+	5  0x0000000000490ee1 in runtime.goexit
+	    at /usr/lib/go-1.16/src/runtime/asm_amd64.s:1371
+  Goroutine 20 - User: /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/data/binding/queue.go:36 fyne.io/fyne/v2/data/binding.makeInfiniteQueue.func1 (0x682e25) [select]
+	0  0x000000000045e645 in runtime.gopark
+	    at /usr/lib/go-1.16/src/runtime/proc.go:337
+	1  0x000000000046ec97 in runtime.selectgo
+	    at /usr/lib/go-1.16/src/runtime/select.go:327
+	2  0x0000000000682e25 in fyne.io/fyne/v2/data/binding.makeInfiniteQueue.func1
+	    at /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/data/binding/queue.go:36
+	3  0x0000000000490ee1 in runtime.goexit
+	    at /usr/lib/go-1.16/src/runtime/asm_amd64.s:1371
+  Goroutine 21 - User: /usr/lib/go-1.16/src/runtime/sema.go:71 sync.runtime_SemacquireMutex (0x48db27) [semacquire]
+	 0  0x000000000045e645 in runtime.gopark
+	     at /usr/lib/go-1.16/src/runtime/proc.go:337
+	 1  0x000000000046f765 in runtime.goparkunlock
+	     at /usr/lib/go-1.16/src/runtime/proc.go:342
+	 2  0x000000000046f765 in runtime.semacquire1
+	     at /usr/lib/go-1.16/src/runtime/sema.go:144
+	 3  0x000000000048db27 in sync.runtime_SemacquireMutex
+	     at /usr/lib/go-1.16/src/runtime/sema.go:71
+	 4  0x00000000006a0c65 in sync.(*RWMutex).RLock
+	     at /usr/lib/go-1.16/src/sync/rwmutex.go:63
+	 5  0x00000000006a0c65 in fyne.io/fyne/v2/widget.(*DisableableWidget).Disabled
+	     at /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/widget/widget.go:214
+	 6  0x0000000000687050 in fyne.io/fyne/v2/widget.(*checkRenderer).applyTheme
+	     at /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/widget/check.go:53
+	 7  0x0000000000687107 in fyne.io/fyne/v2/widget.(*checkRenderer).Refresh
+	     at /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/widget/check.go:60
+	 8  0x00000000006a083f in fyne.io/fyne/v2/widget.(*BaseWidget).Refresh
+	     at /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/widget/widget.go:139
+	 9  0x00000000006a10f1 in fyne.io/fyne/v2/widget.(*Check).Bind.func1
+	     at /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/widget/check.go:127
+	10  0x0000000000681f28 in fyne.io/fyne/v2/data/binding.(*listener).DataChanged
+	     at /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/data/binding/binding.go:55
+	(truncated)
+  Goroutine 22 - User: /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/app/app.go:120 fyne.io/fyne/v2/app.newAppWithDriver.func1 (0x70917d) [chan receive 452306h3m46.091437635s]
+	0  0x000000000045e645 in runtime.gopark
+	    at /usr/lib/go-1.16/src/runtime/proc.go:337
+	1  0x000000000042be0f in runtime.chanrecv
+	    at /usr/lib/go-1.16/src/runtime/chan.go:576
+	2  0x000000000042ba4b in runtime.chanrecv1
+	    at /usr/lib/go-1.16/src/runtime/chan.go:439
+	3  0x000000000070917d in fyne.io/fyne/v2/app.newAppWithDriver.func1
+	    at /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/app/app.go:120
+	4  0x0000000000490ee1 in runtime.goexit
+	    at /usr/lib/go-1.16/src/runtime/asm_amd64.s:1371
+  Goroutine 23 - User: /usr/lib/go-1.16/src/runtime/proc.go:337 runtime.gopark (0x45e645) [GC worker (idle)]
+	0  0x000000000045e645 in runtime.gopark
+	    at /usr/lib/go-1.16/src/runtime/proc.go:337
+	1  0x0000000000442f9b in runtime.gcBgMarkWorker
+	    at /usr/lib/go-1.16/src/runtime/mgc.go:1911
+	2  0x0000000000490ee1 in runtime.goexit
+	    at /usr/lib/go-1.16/src/runtime/asm_amd64.s:1371
+  Goroutine 34 - User: /usr/lib/go-1.16/src/syscall/asm_linux_amd64.s:52 syscall.Syscall6 (0x4d3f0a) (thread 6369)
+	0  0x00000000004d3f0a in syscall.Syscall6
+	    at /usr/lib/go-1.16/src/syscall/asm_linux_amd64.s:52
+	1  0x0000000000703c92 in golang.org/x/sys/unix.EpollWait
+	    at /home/user/go/pkg/mod/golang.org/x/sys@v0.0.0-20200720211630-cb9d2d5c5666/unix/zsyscall_linux_amd64.go:76
+	2  0x0000000000705cd1 in github.com/fsnotify/fsnotify.(*fdPoller).wait
+	    at /home/user/go/pkg/mod/github.com/fsnotify/fsnotify@v1.4.9/inotify_poller.go:86
+	3  0x0000000000704ee6 in github.com/fsnotify/fsnotify.(*Watcher).readEvents
+	    at /home/user/go/pkg/mod/github.com/fsnotify/fsnotify@v1.4.9/inotify.go:192
+	4  0x0000000000490ee1 in runtime.goexit
+	    at /usr/lib/go-1.16/src/runtime/asm_amd64.s:1371
+  Goroutine 35 - User: /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/app/settings_desktop.go:42 fyne.io/fyne/v2/app.watchFile.func1 (0x70959a) [chan receive 452306h3m46.092236284s]
+	0  0x000000000045e645 in runtime.gopark
+	    at /usr/lib/go-1.16/src/runtime/proc.go:337
+	1  0x000000000042be0f in runtime.chanrecv
+	    at /usr/lib/go-1.16/src/runtime/chan.go:576
+	2  0x000000000042ba8b in runtime.chanrecv2
+	    at /usr/lib/go-1.16/src/runtime/chan.go:444
+	3  0x000000000070959a in fyne.io/fyne/v2/app.watchFile.func1
+	    at /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/app/settings_desktop.go:42
+	4  0x0000000000490ee1 in runtime.goexit
+	    at /usr/lib/go-1.16/src/runtime/asm_amd64.s:1371
+  Goroutine 36 - User: /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/internal/driver/glfw/loop.go:185 fyne.io/fyne/v2/internal/driver/glfw.(*gLDriver).startDrawThread.func1 (0x6c2aef) [select]
+	0  0x000000000045e645 in runtime.gopark
+	    at /usr/lib/go-1.16/src/runtime/proc.go:337
+	1  0x000000000046ec97 in runtime.selectgo
+	    at /usr/lib/go-1.16/src/runtime/select.go:327
+	2  0x00000000006c2aef in fyne.io/fyne/v2/internal/driver/glfw.(*gLDriver).startDrawThread.func1
+	    at /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/internal/driver/glfw/loop.go:185
+	3  0x0000000000490ee1 in runtime.goexit
+	    at /usr/lib/go-1.16/src/runtime/asm_amd64.s:1371
+  Goroutine 37 - User: /usr/lib/go-1.16/src/runtime/sema.go:71 sync.runtime_SemacquireMutex (0x48db27) [semacquire]
+	 0  0x000000000045e645 in runtime.gopark
+	     at /usr/lib/go-1.16/src/runtime/proc.go:337
+	 1  0x000000000046f765 in runtime.goparkunlock
+	     at /usr/lib/go-1.16/src/runtime/proc.go:342
+	 2  0x000000000046f765 in runtime.semacquire1
+	     at /usr/lib/go-1.16/src/runtime/sema.go:144
+	 3  0x000000000048db27 in sync.runtime_SemacquireMutex
+	     at /usr/lib/go-1.16/src/runtime/sema.go:71
+	 4  0x00000000004a9ac5 in sync.(*RWMutex).Lock
+	     at /usr/lib/go-1.16/src/sync/rwmutex.go:116
+	 5  0x00000000006a023c in fyne.io/fyne/v2/widget.(*BaseWidget).Resize
+	     at /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/widget/widget.go:55
+	 6  0x0000000000680a77 in fyne.io/fyne/v2/layout.(*formLayout).Layout
+	     at /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/layout/formlayout.go:100
+	 7  0x000000000059bbcc in fyne.io/fyne/v2.(*Container).layout
+	     at /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/container.go:167
+	 8  0x000000000059bbcc in fyne.io/fyne/v2.NewContainerWithLayout
+	     at /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/container.go:48
+	 9  0x0000000000710494 in fyne.io/fyne/v2/container.New
+	     at /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/container/container.go:12
+	10  0x0000000000710494 in myexamples.org/tree-with-details-form/objects.(*Info).GetDetailsForm
+	     at ./objects/info.go:65
+	(truncated)
+  Goroutine 38 - User: /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/internal/driver/glfw/canvas.go:495 fyne.io/fyne/v2/internal/driver/glfw.(*glCanvas).setupThemeListener.func1 (0x6c21a7) [chan receive 452306h3m46.093892149s]
+	0  0x000000000045e645 in runtime.gopark
+	    at /usr/lib/go-1.16/src/runtime/proc.go:337
+	1  0x000000000042be0f in runtime.chanrecv
+	    at /usr/lib/go-1.16/src/runtime/chan.go:576
+	2  0x000000000042ba4b in runtime.chanrecv1
+	    at /usr/lib/go-1.16/src/runtime/chan.go:439
+	3  0x00000000006c21a7 in fyne.io/fyne/v2/internal/driver/glfw.(*glCanvas).setupThemeListener.func1
+	    at /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/internal/driver/glfw/canvas.go:495
+	4  0x0000000000490ee1 in runtime.goexit
+	    at /usr/lib/go-1.16/src/runtime/asm_amd64.s:1371
+  Goroutine 39 - User: /usr/lib/go-1.16/src/runtime/proc.go:337 runtime.gopark (0x45e645) [GC worker (idle) 452306h3m46.094171103s]
+	0  0x000000000045e645 in runtime.gopark
+	    at /usr/lib/go-1.16/src/runtime/proc.go:337
+	1  0x0000000000442f9b in runtime.gcBgMarkWorker
+	    at /usr/lib/go-1.16/src/runtime/mgc.go:1911
+	2  0x0000000000490ee1 in runtime.goexit
+	    at /usr/lib/go-1.16/src/runtime/asm_amd64.s:1371
+  Goroutine 40 - User: /usr/lib/go-1.16/src/runtime/proc.go:337 runtime.gopark (0x45e645) [GC worker (idle)]
+	0  0x000000000045e645 in runtime.gopark
+	    at /usr/lib/go-1.16/src/runtime/proc.go:337
+	1  0x0000000000442f9b in runtime.gcBgMarkWorker
+	    at /usr/lib/go-1.16/src/runtime/mgc.go:1911
+	2  0x0000000000490ee1 in runtime.goexit
+	    at /usr/lib/go-1.16/src/runtime/asm_amd64.s:1371
+  Goroutine 41 - User: /usr/lib/go-1.16/src/runtime/proc.go:337 runtime.gopark (0x45e645) [GC worker (idle)]
+	0  0x000000000045e645 in runtime.gopark
+	    at /usr/lib/go-1.16/src/runtime/proc.go:337
+	1  0x0000000000442f9b in runtime.gcBgMarkWorker
+	    at /usr/lib/go-1.16/src/runtime/mgc.go:1911
+	2  0x0000000000490ee1 in runtime.goexit
+	    at /usr/lib/go-1.16/src/runtime/asm_amd64.s:1371
+  Goroutine 50 - User: /usr/lib/go-1.16/src/runtime/proc.go:337 runtime.gopark (0x45e645) [GC worker (idle)]
+	0  0x000000000045e645 in runtime.gopark
+	    at /usr/lib/go-1.16/src/runtime/proc.go:337
+	1  0x0000000000442f9b in runtime.gcBgMarkWorker
+	    at /usr/lib/go-1.16/src/runtime/mgc.go:1911
+	2  0x0000000000490ee1 in runtime.goexit
+	    at /usr/lib/go-1.16/src/runtime/asm_amd64.s:1371
+  Goroutine 51 - User: /usr/lib/go-1.16/src/runtime/proc.go:337 runtime.gopark (0x45e645) [GC worker (idle)]
+	0  0x000000000045e645 in runtime.gopark
+	    at /usr/lib/go-1.16/src/runtime/proc.go:337
+	1  0x0000000000442f9b in runtime.gcBgMarkWorker
+	    at /usr/lib/go-1.16/src/runtime/mgc.go:1911
+	2  0x0000000000490ee1 in runtime.goexit
+	    at /usr/lib/go-1.16/src/runtime/asm_amd64.s:1371
+  Goroutine 52 - User: /usr/lib/go-1.16/src/runtime/proc.go:337 runtime.gopark (0x45e645) [GC worker (idle)]
+	0  0x000000000045e645 in runtime.gopark
+	    at /usr/lib/go-1.16/src/runtime/proc.go:337
+	1  0x0000000000442f9b in runtime.gcBgMarkWorker
+	    at /usr/lib/go-1.16/src/runtime/mgc.go:1911
+	2  0x0000000000490ee1 in runtime.goexit
+	    at /usr/lib/go-1.16/src/runtime/asm_amd64.s:1371
+  Goroutine 53 - User: /usr/lib/go-1.16/src/runtime/proc.go:337 runtime.gopark (0x45e645) [GC worker (idle)]
+	0  0x000000000045e645 in runtime.gopark
+	    at /usr/lib/go-1.16/src/runtime/proc.go:337
+	1  0x0000000000442f9b in runtime.gcBgMarkWorker
+	    at /usr/lib/go-1.16/src/runtime/mgc.go:1911
+	2  0x0000000000490ee1 in runtime.goexit
+	    at /usr/lib/go-1.16/src/runtime/asm_amd64.s:1371
+  Goroutine 67 - User: /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/internal/painter/svg_cache.go:109 fyne.io/fyne/v2/internal/painter.SvgCacheMonitorTheme.func1 (0x659cd4) [chan receive 452306h3m46.095522125s]
+	0  0x000000000045e645 in runtime.gopark
+	    at /usr/lib/go-1.16/src/runtime/proc.go:337
+	1  0x000000000042be0f in runtime.chanrecv
+	    at /usr/lib/go-1.16/src/runtime/chan.go:576
+	2  0x000000000042ba4b in runtime.chanrecv1
+	    at /usr/lib/go-1.16/src/runtime/chan.go:439
+	3  0x0000000000659cd4 in fyne.io/fyne/v2/internal/painter.SvgCacheMonitorTheme.func1
+	    at /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/internal/painter/svg_cache.go:109
+	4  0x0000000000490ee1 in runtime.goexit
+	    at /usr/lib/go-1.16/src/runtime/asm_amd64.s:1371
+
+
+
+
+
+Goroutine 21 frame 5 at /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/widget/widget.go:214 (PC: 0x6a0c65)
+   209:		})
+   210:	}
+   211:	
+   212:	// Disabled returns true if this widget is currently disabled or false if it can currently be interacted with.
+   213:	func (w *DisableableWidget) Disabled() bool {
+=> 214:		w.propertyLock.RLock()
+   215:		defer w.propertyLock.RUnlock()
+   216:	
+   217:		return w.disabled
+   218:	}
+   219:	
+
+Goroutine 37 frame 5 at /home/user/go/pkg/mod/fyne.io/fyne/v2@v2.0.3/widget/widget.go:55 (PC: 0x6a023c)
+    50:		w.propertyLock.RUnlock()
+    51:		if baseSize == size {
+    52:			return
+    53:		}
+    54:	
+=>  55:		w.propertyLock.Lock()
+    56:		w.size = size
+    57:		w.propertyLock.Unlock()
+    58:	
+    59:		if impl == nil {
+    60:			return
+
+
+
+
+
+

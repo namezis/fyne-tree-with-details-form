@@ -72,7 +72,7 @@ func (o *Info) GetDetailsForm(id string) fyne.CanvasObject {
 				widget.NewLabel("Param6:"), widget.NewEntryWithData(boundParam6),
 				widget.NewLabel("Param7:"), widget.NewEntryWithData(boundParam7),
 				widget.NewLabel("Param8:"), widget.NewEntryWithData(boundParam8),
-				widget.NewLabel("Param15:"), widget.NewCheckWithData("", boundParam15),
+				widget.NewLabel("Param15:"), widget.NewCheckWithData(id, boundParam15),
 				widget.NewSeparator(), widget.NewSeparator(),
 				widget.NewLabel("Param9:"), widget.NewEntryWithData(boundParam9),
 				widget.NewLabel("Param10:"), widget.NewEntryWithData(boundParam10),
@@ -80,7 +80,7 @@ func (o *Info) GetDetailsForm(id string) fyne.CanvasObject {
 				widget.NewLabel("Param12:"), widget.NewEntryWithData(boundParam12),
 				widget.NewLabel("Param13:"), widget.NewEntryWithData(boundParam13),
 				widget.NewSeparator(), widget.NewSeparator(),
-				widget.NewLabel("Param14:"), widget.NewCheckWithData("", boundParam14),
+				widget.NewLabel("Param14:"), widget.NewCheckWithData(id, boundParam14),
 			),
 		),
 	)
